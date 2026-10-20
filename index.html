@@ -1,377 +1,844 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#090909">
-<meta name="description" content="Fit & Furious Gym — connect, find us, follow us, and review your experience.">
-<title>Fit & Furious Gym | One Tap. Every Connection.</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#090909" />
+    <meta
+      name="description"
+      content="Fit & Furious Gym — connect, find us, follow us, and review your experience."
+    />
+    <title>Fit & Furious Gym | One Tap. Every Connection.</title>
 
-<!-- 🏷️ FAVICON / LOGO (inline SVG – no extra file needed) -->
-<link rel="icon" type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2d69b'/%3E%3Cstop offset='1' stop-color='%23d6b16a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Crect x='4' y='4' width='56' height='56' rx='11' fill='none' stroke='url(%23g)' stroke-width='1.5' opacity='.7'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' text-anchor='middle' fill='url(%23g)' letter-spacing='-1'%3EFF%3C/text%3E%3C/svg%3E">
-<link rel="apple-touch-icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2d69b'/%3E%3Cstop offset='1' stop-color='%23d6b16a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' text-anchor='middle' fill='url(%23g)' letter-spacing='-1'%3EFF%3C/text%3E%3C/svg%3E">
+    <!-- 🏷️ FAVICON / LOGO (inline SVG – no extra file needed) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2d69b'/%3E%3Cstop offset='1' stop-color='%23d6b16a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Crect x='4' y='4' width='56' height='56' rx='11' fill='none' stroke='url(%23g)' stroke-width='1.5' opacity='.7'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' text-anchor='middle' fill='url(%23g)' letter-spacing='-1'%3EFF%3C/text%3E%3C/svg%3E"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2d69b'/%3E%3Cstop offset='1' stop-color='%23d6b16a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial,sans-serif' font-size='24' font-weight='900' text-anchor='middle' fill='url(%23g)' letter-spacing='-1'%3EFF%3C/text%3E%3C/svg%3E"
+    />
 
-<style>
-:root{
-  color-scheme:dark;
-  --bg:#080808;--panel:#11100e;--gold:#d6b16a;--gold2:#f2d69b;
-  --cream:#f7f3e9;--muted:#b9b0a0;--line:rgba(214,177,106,.62);
-  --ease:cubic-bezier(.22,.7,.2,1);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;overflow-x:hidden;
-  background:radial-gradient(ellipse at 50% 0%,#211b12 0%,var(--bg) 55%);
-  color:var(--cream);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  min-height:100vh;
-  -webkit-tap-highlight-color:transparent;
-}
-body.is-loading{overflow:hidden}
-a{color:inherit}
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #080808;
+        --panel: #11100e;
+        --gold: #d6b16a;
+        --gold2: #f2d69b;
+        --cream: #f7f3e9;
+        --muted: #b9b0a0;
+        --line: rgba(214, 177, 106, 0.62);
+        --ease: cubic-bezier(0.22, 0.7, 0.2, 1);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          #211b12 0%,
+          var(--bg) 55%
+        );
+        color: var(--cream);
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        min-height: 100vh;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body.is-loading {
+        overflow: hidden;
+      }
+      a {
+        color: inherit;
+      }
 
-/* ===== LOADER ===== */
-.loader{
-  position:fixed;inset:0;z-index:9999;
-  display:grid;place-content:center;justify-items:center;gap:22px;
-  background:radial-gradient(ellipse at 50% 30%,#241d13 0%,#080808 60%);
-  transition:opacity .55s ease,visibility .55s ease;
-}
-.loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.loader-mark{
-  width:96px;height:96px;border-radius:50%;
-  border:1.5px solid var(--gold);
-  display:grid;place-items:center;
-  background:radial-gradient(circle,rgba(214,177,106,.16),transparent 70%);
-  box-shadow:0 0 40px rgba(214,177,106,.28),inset 0 0 20px rgba(214,177,106,.10);
-  animation:pulse 1.6s var(--ease) infinite;
-}
-.loader-mark span{
-  font-weight:1000;font-size:1.9rem;letter-spacing:-.05em;
-  background:linear-gradient(135deg,var(--gold2),var(--gold));
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.loader-text{
-  color:var(--gold2);font-size:.7rem;letter-spacing:.38em;font-weight:800;
-  opacity:0;animation:fadeIn .8s .25s var(--ease) forwards;text-align:center;padding-left:.38em;
-}
-.loader-bar{
-  width:180px;height:2px;border-radius:2px;overflow:hidden;
-  background:rgba(214,177,106,.15);
-}
-.loader-bar span{
-  display:block;height:100%;width:40%;
-  background:linear-gradient(90deg,transparent,var(--gold2),transparent);
-  animation:slide 1.2s var(--ease) infinite;
-}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06);box-shadow:0 0 60px rgba(214,177,106,.5),inset 0 0 26px rgba(214,177,106,.18)}}
-@keyframes slide{0%{transform:translateX(-110%)}100%{transform:translateX(360%)}}
-@keyframes fadeIn{to{opacity:1}}
+      /* ===== LOADER ===== */
+      .loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 22px;
+        background: radial-gradient(
+          ellipse at 50% 30%,
+          #241d13 0%,
+          #080808 60%
+        );
+        transition:
+          opacity 0.55s ease,
+          visibility 0.55s ease;
+      }
+      .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-mark {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        border: 1.5px solid var(--gold);
+        display: grid;
+        place-items: center;
+        background: radial-gradient(
+          circle,
+          rgba(214, 177, 106, 0.16),
+          transparent 70%
+        );
+        box-shadow:
+          0 0 40px rgba(214, 177, 106, 0.28),
+          inset 0 0 20px rgba(214, 177, 106, 0.1);
+        animation: pulse 1.6s var(--ease) infinite;
+      }
+      .loader-mark span {
+        font-weight: 1000;
+        font-size: 1.9rem;
+        letter-spacing: -0.05em;
+        background: linear-gradient(135deg, var(--gold2), var(--gold));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .loader-text {
+        color: var(--gold2);
+        font-size: 0.7rem;
+        letter-spacing: 0.38em;
+        font-weight: 800;
+        opacity: 0;
+        animation: fadeIn 0.8s 0.25s var(--ease) forwards;
+        text-align: center;
+        padding-left: 0.38em;
+      }
+      .loader-bar {
+        width: 180px;
+        height: 2px;
+        border-radius: 2px;
+        overflow: hidden;
+        background: rgba(214, 177, 106, 0.15);
+      }
+      .loader-bar span {
+        display: block;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold2),
+          transparent
+        );
+        animation: slide 1.2s var(--ease) infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.06);
+          box-shadow:
+            0 0 60px rgba(214, 177, 106, 0.5),
+            inset 0 0 26px rgba(214, 177, 106, 0.18);
+        }
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(-110%);
+        }
+        100% {
+          transform: translateX(360%);
+        }
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
 
-/* ===== PAGE ===== */
-.page{
-  width:min(100%,760px);margin:auto;
-  padding:clamp(14px,4vw,28px);
-  padding-bottom:calc(28px + env(safe-area-inset-bottom));
-  position:relative;z-index:1;
-}
-.topline{
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  padding:6px 2px 18px;border-bottom:1px solid rgba(214,177,106,.22);
-}
-.brand-mini{font-size:clamp(.77rem,3vw,1rem);font-weight:900;letter-spacing:.075em;line-height:1.1}
-.brand-mini span{display:block;color:var(--gold);font-size:.65em;letter-spacing:.22em;margin-top:5px;font-weight:700}
-.pill{
-  border:1px solid var(--line);border-radius:999px;padding:7px 11px;
-  color:var(--gold2);font-size:.66rem;letter-spacing:.16em;font-weight:800;
-  white-space:nowrap;position:relative;overflow:hidden;
-}
-.pill::before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(242,214,155,.18),transparent);
-  transform:translateX(-100%);animation:shimmer 3.4s ease-in-out infinite;
-}
-@keyframes shimmer{0%,60%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+      /* ===== PAGE ===== */
+      .page {
+        width: min(100%, 760px);
+        margin: auto;
+        padding: clamp(14px, 4vw, 28px);
+        padding-bottom: calc(28px + env(safe-area-inset-bottom));
+        position: relative;
+        z-index: 1;
+      }
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 2px 18px;
+        border-bottom: 1px solid rgba(214, 177, 106, 0.22);
+      }
+      .brand-mini {
+        font-size: clamp(0.77rem, 3vw, 1rem);
+        font-weight: 900;
+        letter-spacing: 0.075em;
+        line-height: 1.1;
+      }
+      .brand-mini span {
+        display: block;
+        color: var(--gold);
+        font-size: 0.65em;
+        letter-spacing: 0.22em;
+        margin-top: 5px;
+        font-weight: 700;
+      }
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 11px;
+        color: var(--gold2);
+        font-size: 0.66rem;
+        letter-spacing: 0.16em;
+        font-weight: 800;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+      }
+      .pill::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(242, 214, 155, 0.18),
+          transparent
+        );
+        transform: translateX(-100%);
+        animation: shimmer 3.4s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0%,
+        60% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
 
-.hero{padding:clamp(18px,5vw,34px) 0 20px;text-align:center}
-.brand-art{
-  display:block;width:100%;height:auto;max-height:390px;object-fit:contain;
-  border-radius:10px;filter:contrast(1.03);
-  aspect-ratio:16/10;background:rgba(255,255,255,.02);
-}
-.kicker{
-  color:var(--gold2);font-size:.72rem;letter-spacing:.24em;
-  text-transform:uppercase;font-weight:800;margin:20px 0 10px;
-}
-h1{
-  font-size:clamp(2rem,8.4vw,4.5rem);line-height:.93;letter-spacing:-.055em;
-  text-transform:uppercase;font-weight:1000;margin:0 auto;max-width:650px;
-}
-h1 span{color:var(--gold2)}
-.subtitle{color:#c8c0b1;line-height:1.6;font-size:.94rem;max-width:390px;margin:15px auto 0}
+      .hero {
+        padding: clamp(18px, 5vw, 34px) 0 20px;
+        text-align: center;
+      }
+      .brand-art {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 390px;
+        object-fit: contain;
+        border-radius: 10px;
+        filter: contrast(1.03);
+        aspect-ratio: 16/10;
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .kicker {
+        color: var(--gold2);
+        font-size: 0.72rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin: 20px 0 10px;
+      }
+      h1 {
+        font-size: clamp(2rem, 8.4vw, 4.5rem);
+        line-height: 0.93;
+        letter-spacing: -0.055em;
+        text-transform: uppercase;
+        font-weight: 1000;
+        margin: 0 auto;
+        max-width: 650px;
+      }
+      h1 span {
+        color: var(--gold2);
+      }
+      .subtitle {
+        color: #c8c0b1;
+        line-height: 1.6;
+        font-size: 0.94rem;
+        max-width: 390px;
+        margin: 15px auto 0;
+      }
 
-.rule{
-  display:flex;align-items:center;gap:13px;color:var(--gold2);
-  font-size:.67rem;letter-spacing:.23em;font-weight:800;margin:25px 0 15px;
-}
-.rule:before,.rule:after{content:"";height:1px;background:linear-gradient(90deg,transparent,var(--gold));flex:1}
-.rule:after{background:linear-gradient(90deg,var(--gold),transparent)}
+      .rule {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        color: var(--gold2);
+        font-size: 0.67rem;
+        letter-spacing: 0.23em;
+        font-weight: 800;
+        margin: 25px 0 15px;
+      }
+      .rule:before,
+      .rule:after {
+        content: "";
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold));
+        flex: 1;
+      }
+      .rule:after {
+        background: linear-gradient(90deg, var(--gold), transparent);
+      }
 
-/* ===== ACTIONS ===== */
-.actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.action{
-  min-height:148px;text-decoration:none;display:flex;align-items:center;gap:13px;
-  text-align:left;padding:17px 14px;
-  border:1px solid var(--line);border-radius:20px;
-  background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 12px 28px rgba(0,0,0,.22);
-  position:relative;overflow:hidden;
-  touch-action:manipulation;
-  transition:transform .2s var(--ease),border-color .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease);
-  opacity:0;transform:translateY(10px);
-}
-.action::after{
-  content:"";position:absolute;bottom:0;left:16%;right:16%;height:2px;
-  background:linear-gradient(90deg,transparent,var(--gold2),transparent);
-  opacity:.75;transition:opacity .2s ease;
-}
-.action::before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(circle at var(--mx,50%) var(--my,0%),rgba(242,214,155,.16),transparent 55%);
-  opacity:0;transition:opacity .3s ease;
-}
-.action:hover::before,.action:focus-visible::before{opacity:1}
-.action:not(.unavailable):hover,
-.action:not(.unavailable):focus-visible{
-  transform:translateY(-2px);
-  border-color:var(--gold2);
-  background:linear-gradient(145deg,rgba(214,177,106,.16),rgba(255,255,255,.02));
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 16px 34px rgba(0,0,0,.3),0 0 0 1px rgba(242,214,155,.15);
-}
-.action:not(.unavailable):hover::after,
-.action:not(.unavailable):focus-visible::after{opacity:1}
-.action:not(.unavailable):active{transform:scale(.985)}
-.action:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
-.action.unavailable{cursor:not-allowed;opacity:.72}
-.action.unavailable::before,.action.unavailable::after{opacity:.3}
+      /* ===== ACTIONS ===== */
+      .actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .action {
+        min-height: 148px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        text-align: left;
+        padding: 17px 14px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.055),
+          rgba(255, 255, 255, 0.012)
+        );
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.05),
+          0 12px 28px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        touch-action: manipulation;
+        transition:
+          transform 0.2s var(--ease),
+          border-color 0.2s var(--ease),
+          background 0.2s var(--ease),
+          box-shadow 0.2s var(--ease);
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      .action::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 16%;
+        right: 16%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold2),
+          transparent
+        );
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+      }
+      .action::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          circle at var(--mx, 50%) var(--my, 0%),
+          rgba(242, 214, 155, 0.16),
+          transparent 55%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .action:hover::before,
+      .action:focus-visible::before {
+        opacity: 1;
+      }
+      .action:not(.unavailable):hover,
+      .action:not(.unavailable):focus-visible {
+        transform: translateY(-2px);
+        border-color: var(--gold2);
+        background: linear-gradient(
+          145deg,
+          rgba(214, 177, 106, 0.16),
+          rgba(255, 255, 255, 0.02)
+        );
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.07),
+          0 16px 34px rgba(0, 0, 0, 0.3),
+          0 0 0 1px rgba(242, 214, 155, 0.15);
+      }
+      .action:not(.unavailable):hover::after,
+      .action:not(.unavailable):focus-visible::after {
+        opacity: 1;
+      }
+      .action:not(.unavailable):active {
+        transform: scale(0.985);
+      }
+      .action:focus-visible {
+        outline: 3px solid var(--gold2);
+        outline-offset: 3px;
+      }
+      .action.unavailable {
+        cursor: not-allowed;
+        opacity: 0.72;
+      }
+      .action.unavailable::before,
+      .action.unavailable::after {
+        opacity: 0.3;
+      }
 
-.icon-wrap{
-  width:54px;height:54px;min-width:54px;border:1px solid var(--gold);
-  border-radius:50%;display:grid;place-items:center;
-  color:var(--gold2);background:rgba(214,177,106,.045);
-  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);
-}
-.action:not(.unavailable):hover .icon-wrap{
-  transform:rotate(-6deg) scale(1.05);
-  box-shadow:0 0 18px rgba(214,177,106,.35);
-  background:rgba(214,177,106,.10);
-}
-.icon-wrap svg{width:27px;height:27px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .icon-wrap {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        border: 1px solid var(--gold);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--gold2);
+        background: rgba(214, 177, 106, 0.045);
+        transition:
+          transform 0.25s var(--ease),
+          box-shadow 0.25s var(--ease),
+          background 0.25s var(--ease);
+      }
+      .action:not(.unavailable):hover .icon-wrap {
+        transform: rotate(-6deg) scale(1.05);
+        box-shadow: 0 0 18px rgba(214, 177, 106, 0.35);
+        background: rgba(214, 177, 106, 0.1);
+      }
+      .icon-wrap svg {
+        width: 27px;
+        height: 27px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
 
-.action-copy{min-width:0;display:flex;flex-direction:column;gap:5px}
-.action-title{font-size:clamp(.94rem,3.6vw,1.12rem);font-weight:850;line-height:1.1}
-.action-sub{font-size:.72rem;color:var(--muted);line-height:1.35}
-.arrow{
-  position:absolute;right:12px;top:13px;color:var(--gold);
-  font-size:1.15rem;line-height:1;transition:transform .2s var(--ease);
-}
-.action:not(.unavailable):hover .arrow{transform:translateX(3px)}
+      .action-copy {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .action-title {
+        font-size: clamp(0.94rem, 3.6vw, 1.12rem);
+        font-weight: 850;
+        line-height: 1.1;
+      }
+      .action-sub {
+        font-size: 0.72rem;
+        color: var(--muted);
+        line-height: 1.35;
+      }
+      .arrow {
+        position: absolute;
+        right: 12px;
+        top: 13px;
+        color: var(--gold);
+        font-size: 1.15rem;
+        line-height: 1;
+        transition: transform 0.2s var(--ease);
+      }
+      .action:not(.unavailable):hover .arrow {
+        transform: translateX(3px);
+      }
 
-/* Entrance animation after loader */
-body.is-ready .action{animation:cardIn .55s var(--ease) forwards}
-body.is-ready .action:nth-child(1){animation-delay:.05s}
-body.is-ready .action:nth-child(2){animation-delay:.12s}
-body.is-ready .action:nth-child(3){animation-delay:.19s}
-body.is-ready .action:nth-child(4){animation-delay:.26s}
-@keyframes cardIn{to{opacity:1;transform:translateY(0)}}
+      /* Entrance animation after loader */
+      body.is-ready .action {
+        animation: cardIn 0.55s var(--ease) forwards;
+      }
+      body.is-ready .action:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      body.is-ready .action:nth-child(2) {
+        animation-delay: 0.12s;
+      }
+      body.is-ready .action:nth-child(3) {
+        animation-delay: 0.19s;
+      }
+      body.is-ready .action:nth-child(4) {
+        animation-delay: 0.26s;
+      }
+      @keyframes cardIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-.notice{
-  display:none;margin:16px 0 0;padding:12px 14px;
-  border:1px solid rgba(214,177,106,.28);border-radius:12px;
-  color:#d6c9b1;background:#15120d;font-size:.82rem;line-height:1.5;
-}
-.notice.show{display:block;animation:cardIn .35s var(--ease) both}
+      .notice {
+        display: none;
+        margin: 16px 0 0;
+        padding: 12px 14px;
+        border: 1px solid rgba(214, 177, 106, 0.28);
+        border-radius: 12px;
+        color: #d6c9b1;
+        background: #15120d;
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .notice.show {
+        display: block;
+        animation: cardIn 0.35s var(--ease) both;
+      }
 
-.bottom{margin-top:28px;text-align:center}
-.slogan{
-  display:flex;align-items:center;gap:12px;justify-content:center;
-  color:var(--gold2);font-size:.67rem;letter-spacing:.2em;font-weight:850;
-}
-.slogan:before,.slogan:after{content:"";height:1px;background:var(--gold);flex:1;max-width:55px}
-.footer{color:#857b6a;font-size:.7rem;margin-top:12px;letter-spacing:.04em}
+      .bottom {
+        margin-top: 28px;
+        text-align: center;
+      }
+      .slogan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+        color: var(--gold2);
+        font-size: 0.67rem;
+        letter-spacing: 0.2em;
+        font-weight: 850;
+      }
+      .slogan:before,
+      .slogan:after {
+        content: "";
+        height: 1px;
+        background: var(--gold);
+        flex: 1;
+        max-width: 55px;
+      }
+      .footer {
+        color: #857b6a;
+        font-size: 0.7rem;
+        margin-top: 12px;
+        letter-spacing: 0.04em;
+      }
 
-/* ===== RESPONSIVE ===== */
-@media(min-width:560px){
-  .actions{gap:16px}
-  .action{min-height:164px;padding:20px}
-  .icon-wrap{width:62px;height:62px;min-width:62px}
-  .icon-wrap svg{width:31px;height:31px}
-}
-@media(max-width:360px){
-  .page{padding:13px}
-  .actions{gap:9px}
-  .action{padding:14px 10px;gap:9px;min-height:136px;border-radius:16px}
-  .icon-wrap{width:43px;height:43px;min-width:43px}
-  .icon-wrap svg{width:23px;height:23px}
-  .action-sub{font-size:.66rem}
-  .action-title{font-size:.9rem}
-}
-@media(prefers-reduced-motion:reduce){
-  *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
-  .loader{transition:opacity .2s linear}
-  body.is-ready .action{opacity:1;transform:none}
-}
-</style>
-</head>
-<body class="is-loading">
+      /* ===== RESPONSIVE ===== */
+      @media (min-width: 560px) {
+        .actions {
+          gap: 16px;
+        }
+        .action {
+          min-height: 164px;
+          padding: 20px;
+        }
+        .icon-wrap {
+          width: 62px;
+          height: 62px;
+          min-width: 62px;
+        }
+        .icon-wrap svg {
+          width: 31px;
+          height: 31px;
+        }
+      }
+      @media (max-width: 360px) {
+        .page {
+          padding: 13px;
+        }
+        .actions {
+          gap: 9px;
+        }
+        .action {
+          padding: 14px 10px;
+          gap: 9px;
+          min-height: 136px;
+          border-radius: 16px;
+        }
+        .icon-wrap {
+          width: 43px;
+          height: 43px;
+          min-width: 43px;
+        }
+        .icon-wrap svg {
+          width: 23px;
+          height: 23px;
+        }
+        .action-sub {
+          font-size: 0.66rem;
+        }
+        .action-title {
+          font-size: 0.9rem;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          scroll-behavior: auto !important;
+          transition: none !important;
+          animation: none !important;
+        }
+        .loader {
+          transition: opacity 0.2s linear;
+        }
+        body.is-ready .action {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-loading">
+    <!-- 🌀 LOADER -->
+    <div
+      class="loader"
+      id="loader"
+      role="status"
+      aria-label="Loading Fit and Furious Gym"
+    >
+      <div class="loader-mark" aria-hidden="true"><span>FF</span></div>
+      <div class="loader-text">FIT &amp; FURIOUS</div>
+      <div class="loader-bar" aria-hidden="true"><span></span></div>
+    </div>
+    <noscript
+      ><style>
+        .loader {
+          display: none;
+        }
+        body.is-loading {
+          overflow: auto;
+        }
+      </style></noscript
+    >
 
-<!-- 🌀 LOADER -->
-<div class="loader" id="loader" role="status" aria-label="Loading Fit and Furious Gym">
-  <div class="loader-mark" aria-hidden="true"><span>FF</span></div>
-  <div class="loader-text">FIT &amp; FURIOUS</div>
-  <div class="loader-bar" aria-hidden="true"><span></span></div>
-</div>
-<noscript><style>.loader{display:none}body.is-loading{overflow:auto}</style></noscript>
+    <main class="page">
+      <header class="topline">
+        <div class="brand-mini">
+          FIT &amp; FURIOUS GYM<span>GET FIT. GET FURIOUS.</span>
+        </div>
+        <div class="pill">NFC CONNECT</div>
+      </header>
 
-<main class="page">
-  <header class="topline">
-    <div class="brand-mini">FIT &amp; FURIOUS GYM<span>GET FIT. GET FURIOUS.</span></div>
-    <div class="pill">NFC CONNECT</div>
-  </header>
+      <section class="hero" aria-labelledby="main-title">
+        <img
+          class="brand-art"
+          src="assets/fit-furious-branding.png"
+          alt="Fit &amp; Furious Gym branding with a bodybuilder illustration and gym equipment"
+          decoding="async"
+        />
+        <p class="kicker">Your next rep starts here</p>
+        <h1 id="main-title">One tap.<br /><span>Every connection.</span></h1>
+        <p class="subtitle">
+          Chat with us, find the gym, follow the journey, or share your
+          experience.
+        </p>
+      </section>
 
-  <section class="hero" aria-labelledby="main-title">
-    <img class="brand-art" src="assets/fit-furious-branding.png"
-         alt="Fit &amp; Furious Gym branding with a bodybuilder illustration and gym equipment"
-         decoding="async">
-    <p class="kicker">Your next rep starts here</p>
-    <h1 id="main-title">One tap.<br><span>Every connection.</span></h1>
-    <p class="subtitle">Chat with us, find the gym, follow the journey, or share your experience.</p>
-  </section>
+      <div class="rule">CONNECT WITH US</div>
+      <section class="actions" aria-label="Gym contact and social links">
+        <a
+          class="action"
+          data-link="whatsapp"
+          href="#"
+          aria-label="Chat with Fit and Furious Gym on WhatsApp"
+        >
+          <span class="icon-wrap" aria-hidden="true"
+            ><svg viewBox="0 0 24 24">
+              <path
+                d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8A8.2 8.2 0 1 1 20.2 11.7Z"
+              />
+              <path
+                d="M8.2 7.7c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.5.9 1.2 1.6 2.1 2.1.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1-.2-2.3-.8-3.7-2-1.7-1.5-2.5-3-2.8-4-.3-.9 0-1.6.4-2.1Z"
+              /></svg
+          ></span>
+          <span class="action-copy"
+            ><span class="action-title">WhatsApp</span
+            ><span class="action-sub" data-sub="whatsapp"
+              >Chat with our team</span
+            ></span
+          ><span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a
+          class="action"
+          data-link="maps"
+          href="#"
+          aria-label="Find Fit and Furious Gym on Google Maps"
+        >
+          <span class="icon-wrap" aria-hidden="true"
+            ><svg viewBox="0 0 24 24">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="2.5" /></svg
+          ></span>
+          <span class="action-copy"
+            ><span class="action-title">Find the Gym</span
+            ><span class="action-sub" data-sub="maps"
+              >Open Google Maps</span
+            ></span
+          ><span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a
+          class="action"
+          data-link="instagram"
+          href="#"
+          aria-label="Follow Fit and Furious Gym on Instagram"
+        >
+          <span class="icon-wrap" aria-hidden="true"
+            ><svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <path d="M17.6 6.5h.01" /></svg
+          ></span>
+          <span class="action-copy"
+            ><span class="action-title">Instagram</span
+            ><span class="action-sub" data-sub="instagram"
+              >Follow our journey</span
+            ></span
+          ><span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a
+          class="action"
+          data-link="reviews"
+          href="#"
+          aria-label="Leave a Google review for Fit and Furious Gym"
+        >
+          <span class="icon-wrap" aria-hidden="true"
+            ><svg viewBox="0 0 24 24">
+              <path d="M21 12.2a9 9 0 1 1-2.6-6.4" />
+              <path d="M21 4v6h-6" />
+              <path d="M8 12h8M8 16h5" /></svg
+          ></span>
+          <span class="action-copy"
+            ><span class="action-title">Google Reviews</span
+            ><span class="action-sub" data-sub="reviews"
+              >Rate your experience</span
+            ></span
+          ><span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </section>
+      <p class="notice" id="notice" role="status" aria-live="polite"></p>
 
-  <div class="rule">CONNECT WITH US</div>
-  <section class="actions" aria-label="Gym contact and social links">
-    <a class="action" data-link="whatsapp" href="#" aria-label="Chat with Fit and Furious Gym on WhatsApp">
-      <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.8A8.2 8.2 0 1 1 20.2 11.7Z"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.5.9 1.2 1.6 2.1 2.1.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.7-.1l1.7.8c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1-.2-2.3-.8-3.7-2-1.7-1.5-2.5-3-2.8-4-.3-.9 0-1.6.4-2.1Z"/></svg></span>
-      <span class="action-copy"><span class="action-title">WhatsApp</span><span class="action-sub" data-sub="whatsapp">Chat with our team</span></span><span class="arrow" aria-hidden="true">›</span>
-    </a>
-    <a class="action" data-link="maps" href="#" aria-label="Find Fit and Furious Gym on Google Maps">
-      <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-      <span class="action-copy"><span class="action-title">Find the Gym</span><span class="action-sub" data-sub="maps">Open Google Maps</span></span><span class="arrow" aria-hidden="true">›</span>
-    </a>
-    <a class="action" data-link="instagram" href="#" aria-label="Follow Fit and Furious Gym on Instagram">
-      <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.6 6.5h.01"/></svg></span>
-      <span class="action-copy"><span class="action-title">Instagram</span><span class="action-sub" data-sub="instagram">Follow our journey</span></span><span class="arrow" aria-hidden="true">›</span>
-    </a>
-    <a class="action" data-link="reviews" href="#" aria-label="Leave a Google review for Fit and Furious Gym">
-      <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12.2a9 9 0 1 1-2.6-6.4"/><path d="M21 4v6h-6"/><path d="M8 12h8M8 16h5"/></svg></span>
-      <span class="action-copy"><span class="action-title">Google Reviews</span><span class="action-sub" data-sub="reviews">Rate your experience</span></span><span class="arrow" aria-hidden="true">›</span>
-    </a>
-  </section>
-  <p class="notice" id="notice" role="status" aria-live="polite"></p>
+      <footer class="bottom">
+        <div class="slogan">GET FIT. GET FURIOUS. ELEVATE YOUR LIMITS.</div>
+        <p class="footer">Built for one-tap access · Fit &amp; Furious Gym</p>
+      </footer>
+    </main>
 
-  <footer class="bottom">
-    <div class="slogan">GET FIT. GET FURIOUS. ELEVATE YOUR LIMITS.</div>
-    <p class="footer">Built for one-tap access · Fit &amp; Furious Gym</p>
-  </footer>
-</main>
-
-<script>
-/* ===========================================================
+    <script>
+      /* ===========================================================
    CONFIG — fill in the four real HTTPS destinations.
    WhatsApp format: https://wa.me/COUNTRYCODEPHONENUMBER
    (digits only, no + or spaces)
 =========================================================== */
-const GYM_LINKS = Object.freeze({
-  whatsapp: "+923312547659",
-  maps: "",
-  instagram: "",
-  reviews: ""
-});
-
-const LABELS = Object.freeze({
-  whatsapp:  "WhatsApp link has not been added yet.",
-  maps:      "The gym's Google Maps link has not been added yet.",
-  instagram: "The gym's Instagram link has not been added yet.",
-  reviews:   "The Google Reviews link has not been added yet."
-});
-
-/* ---------- Security helpers ---------- */
-function safeHttpsUrl(raw){
-  if (typeof raw !== "string") return null;
-  const trimmed = raw.trim();
-  if (!trimmed || trimmed.length > 2048) return null;
-  try {
-    const u = new URL(trimmed);
-    if (u.protocol !== "https:") return null;
-    if (!u.hostname || !u.hostname.includes(".")) return null;
-    return u.toString();
-  } catch { return null; }
-}
-
-/* ---------- Loader ---------- */
-(function initLoader(){
-  const loader = document.getElementById("loader");
-  const body   = document.body;
-  let done = false;
-  const hideLoader = () => {
-    if (done || !loader) return;
-    done = true;
-    loader.classList.add("hidden");
-    body.classList.remove("is-loading");
-    body.classList.add("is-ready");
-    setTimeout(() => loader.remove?.(), 700);
-  };
-  window.addEventListener("load", () => setTimeout(hideLoader, 500), { once:true });
-  setTimeout(hideLoader, 3500); // safety net
-})();
-
-/* ---------- Wire the action buttons safely ---------- */
-(function initLinks(){
-  const notice = document.getElementById("notice");
-
-  document.querySelectorAll("[data-link]").forEach((link) => {
-    const key    = link.dataset.link;
-    const target = safeHttpsUrl(GYM_LINKS[key]);
-
-    if (target) {
-      link.href = target;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer nofollow";
-      link.referrerPolicy = "no-referrer";
-      link.classList.remove("unavailable");
-      link.removeAttribute("aria-disabled");
-      const sub = link.querySelector(`[data-sub="${key}"]`);
-      if (sub) sub.textContent = "Tap to open";
-    } else {
-      link.removeAttribute("href");
-      link.removeAttribute("target");
-      link.classList.add("unavailable");
-      link.setAttribute("aria-disabled", "true");
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        if (notice) {
-          notice.textContent = (LABELS[key] || "Link unavailable.") + " Ask the gym owner to add the official URL.";
-          notice.classList.add("show");
-        }
+      const GYM_LINKS = Object.freeze({
+        whatsapp: "https://wa.me/923312547659",
+        maps: "https://www.google.com/maps/place/Fit+and+Furious+Gym/@24.9075373,67.0316297,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33fd272bf4091:0x4da032b0a8131ee9!8m2!3d24.9075373!4d67.0316297!16s%2Fg%2F11p1p3bdnp!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
+        instagram: "https://www.instagram.com/fitandfuriousgym?utm_source=ig_web_button_share_sheet&rpxt=ZDNlZDc0MzIxNw==",
+        reviews: "https://www.google.com/maps/place/Fit+and+Furious+Gym/@24.9075373,67.0316297,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33fd272bf4091:0x4da032b0a8131ee9!8m2!3d24.9075373!4d67.0316297!16s%2Fg%2F11p1p3bdnp!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MTAxNC4wIKXMDSoASAFQAw%3D%3D",
       });
-    }
-  });
-})();
 
-/* ---------- Micro-interaction: cursor-tracking glow ---------- */
-(function initGlow(){
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  document.querySelectorAll(".action").forEach((card) => {
-    card.addEventListener("pointermove", (e) => {
-      const r = card.getBoundingClientRect();
-      card.style.setProperty("--mx", ((e.clientX - r.left) / r.width) * 100 + "%");
-      card.style.setProperty("--my", ((e.clientY - r.top) / r.height) * 100 + "%");
-    });
-  });
-})();
-</script>
-</body>
+      const LABELS = Object.freeze({
+        whatsapp: "WhatsApp link has not been added yet.",
+        maps: "The gym's Google Maps link has not been added yet.",
+        instagram: "The gym's Instagram link has not been added yet.",
+        reviews: "The Google Reviews link has not been added yet.",
+      });
+
+      /* ---------- Security helpers ---------- */
+      function safeHttpsUrl(raw) {
+        if (typeof raw !== "string") return null;
+        const trimmed = raw.trim();
+        if (!trimmed || trimmed.length > 2048) return null;
+        try {
+          const u = new URL(trimmed);
+          if (u.protocol !== "https:") return null;
+          if (!u.hostname || !u.hostname.includes(".")) return null;
+          return u.toString();
+        } catch {
+          return null;
+        }
+      }
+
+      /* ---------- Loader ---------- */
+      (function initLoader() {
+        const loader = document.getElementById("loader");
+        const body = document.body;
+        let done = false;
+        const hideLoader = () => {
+          if (done || !loader) return;
+          done = true;
+          loader.classList.add("hidden");
+          body.classList.remove("is-loading");
+          body.classList.add("is-ready");
+          setTimeout(() => loader.remove?.(), 700);
+        };
+        window.addEventListener("load", () => setTimeout(hideLoader, 500), {
+          once: true,
+        });
+        setTimeout(hideLoader, 3500); // safety net
+      })();
+
+      /* ---------- Wire the action buttons safely ---------- */
+      (function initLinks() {
+        const notice = document.getElementById("notice");
+
+        document.querySelectorAll("[data-link]").forEach((link) => {
+          const key = link.dataset.link;
+          const target = safeHttpsUrl(GYM_LINKS[key]);
+
+          if (target) {
+            link.href = target;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer nofollow";
+            link.referrerPolicy = "no-referrer";
+            link.classList.remove("unavailable");
+            link.removeAttribute("aria-disabled");
+            const sub = link.querySelector(`[data-sub="${key}"]`);
+            if (sub) sub.textContent = "Tap to open";
+          } else {
+            link.removeAttribute("href");
+            link.removeAttribute("target");
+            link.classList.add("unavailable");
+            link.setAttribute("aria-disabled", "true");
+            link.addEventListener("click", (event) => {
+              event.preventDefault();
+              if (notice) {
+                notice.textContent =
+                  (LABELS[key] || "Link unavailable.") +
+                  " Ask the gym owner to add the official URL.";
+                notice.classList.add("show");
+              }
+            });
+          }
+        });
+      })();
+
+      /* ---------- Micro-interaction: cursor-tracking glow ---------- */
+      (function initGlow() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+          return;
+        document.querySelectorAll(".action").forEach((card) => {
+          card.addEventListener("pointermove", (e) => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty(
+              "--mx",
+              ((e.clientX - r.left) / r.width) * 100 + "%",
+            );
+            card.style.setProperty(
+              "--my",
+              ((e.clientY - r.top) / r.height) * 100 + "%",
+            );
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>
